@@ -9,16 +9,23 @@
     background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
     position: absolute;
-    div {
+    .container-1 {
       margin-top: 180px;
       display: flex;
       flex-direction: column;
       border-radius: 20px;
 
-      span {
+      .line-1 {
         font-size: 32pt;
         font-weight: bold;
         color: white;
+      }
+
+      .line-2 {
+        font-size: 32pt;
+        font-weight: bold;
+        color: white;
+        padding-top: 25px;
       }
       button {
         width: 20%;
@@ -34,7 +41,7 @@
 
       .nav-button-container {
         display: flex;
-        margin-top: 120px;
+        margin-top: 150px;
         flex-direction: row;
         justify-content: center;
 
@@ -48,6 +55,77 @@
         }
         span {
           color: rgb(209, 116, 10);
+        }
+      }
+      .central-div1 {
+        width: 70vw;
+        height: 350px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 50px;
+        border: 20px solid  rgb(233, 233, 220);
+
+        .central-div-1 {
+          width: 50%;
+          
+        }
+        .central-div-2 {
+          background-color: rgb(233, 233, 220);
+          width: 50%;
+          height: 338px;
+          display: flex;
+          align-items: center;
+          padding-left: 50px;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px;
+
+            .span-1 {
+              font-weight: bold;
+              font-size: 12pt;
+              padding: 8px 0px;
+            }
+            .span-2 {
+              font-size: 32pt;
+              font-weight: bold;
+              padding: 8px 0px;
+            }
+            .span-3 {
+              font-weight: lighter;
+              padding: 8px 0px;
+              padding-top: 30px;
+              width: 70%;
+            }
+          }
+        }
+      }
+      .central-div2 {
+        width: 70vw;
+        height: 350px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 50px;
+        border: 20px solid  rgb(233, 233, 220);
+
+        .part1 {
+          background-color: rgb(233, 233, 220);
+          width: 50%;
+          height: 338px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-left: 50px;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px;
+            width: 50%;
+          }
         }
       }
     }
