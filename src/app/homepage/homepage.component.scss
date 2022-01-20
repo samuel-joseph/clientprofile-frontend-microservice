@@ -1,0 +1,55 @@
+.homepage-container {
+  img {
+    position: absolute;
+  }
+  .overlay {
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    position: absolute;
+    div {
+      margin-top: 180px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+
+      span {
+        font-size: 32pt;
+        font-weight: bold;
+        color: white;
+      }
+      button {
+        width: 20%;
+        font-size: 8pt;
+        padding: 10px 0;
+        border-radius: 10px;
+        border: solid 1.5px black;
+        font-weight: bold;
+        color: white;
+        background-color: rgb(209, 116, 10);
+        margin-top: 15px;
+      }
+
+      .nav-button-container {
+        display: flex;
+        margin-top: 120px;
+        flex-direction: row;
+        justify-content: center;
+
+        button {
+          height: 15vh;
+          width: 200px;
+          background-color: rgb(29, 27, 139, 0.95);
+          margin: 0 5px;
+          border-radius: 5px;
+          padding: 20px 0;
+        }
+        span {
+          color: rgb(209, 116, 10);
+        }
+      }
+    }
+  }
+}

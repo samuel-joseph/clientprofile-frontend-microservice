@@ -11,5 +11,9 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  images: any = 
+  {
+    family: "../assets/family.jpeg"
+  }
 
 }

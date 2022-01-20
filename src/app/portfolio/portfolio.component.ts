@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class PortfolioComponent implements OnInit {
 
   constructor() { }
+  images: any = 
+  {
+    family: "../assets/family.jpeg"
+  }
 
   ngOnInit(): void {
   }

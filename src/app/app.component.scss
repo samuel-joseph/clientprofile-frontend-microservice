@@ -1,0 +1,41 @@
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  nav {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    height: fit-content;
+    width: 100vw;
+    background-color: rgb(29, 27, 139);
+
+    p {
+      font-weight: bold;
+      margin-left: 5vw;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-right: 5vw;
+      font-size: 8pt;
+      font-weight: bold;
+
+      a {
+        text-decoration: none;
+        padding: 0px 10px;
+        color: white;
+      }
+    }
+  }
+}
