@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'user-profile-frontend';
+  light: boolean = false;
+  switch() {
+    console.log("AM I HERE")
+    this.light = !this.light;
+  }
 }

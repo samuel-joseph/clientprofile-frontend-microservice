@@ -1,13 +1,32 @@
 <div class="background">
   
-  <nav>
-    <p><a routerLink="/homepage" routerLinkActive="active">FINANSAM</a></p>
-    <ul>
+  <div class="main-container">
+    <nav class="navbar">
+      <div class="left-container">
+        <div class="hamburger-container">
+          <button class="hamburger-button" (click)="switch()">
+        <img class="hamburger" alt="hamburger" src="../assets/hamburger.jpeg" />
+      </button>
+      </div>
+        <a routerLink="/homepage" routerLinkActive="active">FINANSAM</a></div>
+      <ul>
+        <a routerLink="/profile" routerLinkActive="active">PROFILE</a>
+        <a routerLink="/portfolio" routerLinkActive="active">PORTFOLIO</a>
+        <a routerLink="/transaction" routerLinkActive="active">TRANSACTION HISTORY</a>
+      </ul>
+      
+    </nav>
+    <div *ngIf="light" class="a-container">
       <a routerLink="/profile" routerLinkActive="active">PROFILE</a>
       <a routerLink="/portfolio" routerLinkActive="active">PORTFOLIO</a>
       <a routerLink="/transaction" routerLinkActive="active">TRANSACTION HISTORY</a>
-    </ul>
-  </nav>
+  </div>
+  </div>
+  
+  
+  
 
   <router-outlet></router-outlet>
 </div>
+
+

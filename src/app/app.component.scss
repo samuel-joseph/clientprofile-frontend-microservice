@@ -4,15 +4,14 @@
   right: 0;
   bottom: 0;
   left: 0;
-  nav {
+
+  .navbar {
     color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
     height: fit-content;
-    width: 100vw;
-    background-color: rgb(29, 27, 139);
+    width: 100%;
 
     p {
       font-weight: bold;
@@ -22,20 +21,109 @@
         color: white;
       }
     }
+  }
+}
 
-    ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      margin-right: 5vw;
-      font-size: 8pt;
-      font-weight: bold;
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 5vw;
+  font-size: 12pt;
+  font-weight: bold;
 
-      a {
-        text-decoration: none;
-        padding: 0px 10px;
-        color: white;
-      }
-    }
+  a {
+    text-decoration: none;
+    padding: 0px 10px;
+    color: white;
+  }
+}
+
+.navbar {
+  background-color: rgb(29, 27, 139);
+}
+
+.left-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  margin-left: 5vw;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 12pt;
+    font-weight: bold;
+  }
+}
+
+.hamburger-button {
+  background-color: transparent;
+  border: none;
+}
+
+.hamburger {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.hamburger-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    padding: 0px 0px;
+  }
+}
+
+.main-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(29, 27, 139);
+  z-index: 1;
+  position: absolute;
+}
+
+.a-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 8pt;
+    font-weight: lighter;
+  }
+}
+
+/* mobiles (landscape and portrait) */
+@media only screen and (max-width: 800px) {
+  .navbar {
+    background-color: rgb(29, 27, 139);
+    height: 20vh;
+  }
+
+  .left-container {
+    margin-left: 0vw;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .a-container {
+    margin-left: 10px;
   }
 }
