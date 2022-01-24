@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 
@@ -22,7 +23,8 @@ import { HomepageComponent } from './homepage/homepage.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     {provide:MAT_DATE_LOCALE,useValue:'en-GB'}

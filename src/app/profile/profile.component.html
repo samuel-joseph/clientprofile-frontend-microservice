@@ -20,27 +20,106 @@
           <span>2022-01-18</span>
         </div>
       </div>
-      <h2>My Portfolio</h2>
-      <div class="sub-row-column">
-        <h3>Last Name</h3>
-        <input />
-        <h3>Age</h3>
-        <input />
-        <h3>Member since</h3>
-        <span>2022-01-18</span>
-      </div>
+
     </div>
     <div class="sub-container-1-2">
       <div class="sub-column">
         <img class="profile" src="../../assets/profile.png" alt="" />
         <span>username12345</span>
         <span>email@email.com</span>
-        <button>Reset Password</button>
-        <input placeholder="Enter old password" />
-        <input placeholder="Enter new password" />
-        <input placeholder="Retype new password" />
-        <button>Reset Password</button>
+        <button *ngIf="toChangePassword" (click)="resetPassword()">Reset Password</button>
+        <div 
+        *ngIf="oldPassword">
+          <input  
+          [(ngModel)] = "temp"
+          placeholder="Enter old password" 
+          />
+          <button type="submit" (click)="userAccount.password=checkPassword()">Submit</button>
+        </div>
+
+        <div *ngIf="newPassword">
+          <input [(ngModel)]="tempPwd" placeholder="Enter new password" />
+          <input [(ngModel)]="newPwd.password" placeholder="Retype new password" />
+          <button (click)="confirmPassword()">Reset Password</button>
+      </div>
       </div>
     </div>
+  </div>
+  <div class="sub-container-2">
+    <h2>MY PORTFOLIO</h2>
+    <div>
+      <button (click)="switchNav('Overview')">Overview</button>
+      <button (click)="switchNav('Performance')">Performance</button>
+      <button (click)="switchNav('Price')">Price</button>
+    </div>
+
+    <table *ngIf="performance">
+      <tr>
+        <th>Ticker | Fund name</th>
+        <th>YTD</th>
+        <th>1-yr</th>
+        <th>5-yr</th>
+        <th>10-yr</th>
+        <th>Since inception</th>
+      </tr>
+      <tr>
+        <td>
+          <a [routerLink]="['/fund/' + 1 + '/edit']">Fund.Ticker<br />Fund.Name</a
+          >
+        </td>
+        <td>fund.ytd</td>
+        <td>fund.oneyr</td>
+        <td>fund.fiveyr</td>
+        <td>fund.tenyr</td>
+        <td>fund.sinceInception</td>
+      </tr>
+    </table>
+
+    <table *ngIf="price">
+      <tr>
+        <th>Ticker | Fund name</th>
+        <th>Price</th>
+        <th>Change Price</th>
+      </tr>
+      <tr>
+        <td>
+          <a [routerLink]="['/fund/' + 1 + '/edit']"
+            > fund.ticker <br /> fund.name </a
+          >
+        </td>
+        <td> fund.price </td>
+        <td> fund.priceChange </td>
+      </tr>
+    </table>
+
+
+
+    <table *ngIf="overview">
+      <tr>
+        <th>Ticker | Fund name</th>
+        <th>Asset class</th>
+        <th>Expense ratio</th>
+        <th>Remove</th>
+      </tr>
+      <tr>
+        <td>
+          <a [routerLink]="['/fund/' + 1 + '/edit']"
+            > fund.ticker <br /> fund.name </a
+          >
+        </td>
+        <td> fund.assetClass </td>
+        <td> fund.expenseRatio </td>
+        <td>
+          <!-- <div (click)="toDelete(fund.id)"> -->
+            <div>
+            <img
+              alt="trash"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4r68Sv4kY8f3-1d2nkElFVQ8uhi4QPnRjcriPlPqpUpqZfpGzRthctK1G2EpZ_rmp6AU&usqp=CAU"
+            />
+          </div>
+        </td>
+      </tr>
+    </table>
+
   </div>
 </div>
